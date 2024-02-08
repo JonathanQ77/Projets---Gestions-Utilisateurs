@@ -1,17 +1,17 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3090/users";
+const BASE_URL = "http://localhost:3090/annonces";
 
-export class userAPI {
+export class AnnonceAPI {
   static async fetchAll() {
     return (await axios.get(`${BASE_URL}`)).data.map(this.formatId);
   }
 
-  static formatId(user) {
+  static formatId(annonce) {
     // met les id nombre en string
     return {
-      ...user,
-      id: user.id.toString(),
+      ...annonce,
+      id: annonce.id.toString(),
     };
   }
 }

@@ -1,10 +1,10 @@
 // store config
 
 import { configureStore } from "@reduxjs/toolkit";
-import { userReducer } from "./user/user-slice";
+import { annonceReducer } from "./annonce/annonce-slice";
 
 export const store = configureStore({
   reducer: {
-    USER: userReducer,
+    ANNONCE: annonceReducer,
   },
 });

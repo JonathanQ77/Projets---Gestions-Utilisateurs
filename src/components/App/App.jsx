@@ -1,30 +1,30 @@
 import { Outlet } from "react-router";
 import s from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { userAPI } from "API/note-api";
-import { setUserList } from "store/user/user-slice";
+import { AnnonceAPI } from "API/annonce-api";
+import { setAnnonceList } from "store/annonce/annonce-slice";
 import { useEffect } from "react";
 
 export function App() {
   const dispatch = useDispatch();
 
-  async function fetchAllUsers() {
-    const userList = await userAPI.fetchAll();
-    dispatch(setUserList(userList));
+  async function fetchAllAnnonces() {
+    const annoncesList = await AnnonceAPI.fetchAll();
+    dispatch(setAnnonceList(annoncesList));
   }
 
   useEffect(() => {
-    fetchAllUsers();
+    fetchAllAnnonces();
   }, []);
 
-  const datas = useSelector((store) => store.USER.userList);
+  const datas = useSelector((store) => store.ANNONCE.annonceList);
 
   return (
     <div className="">
       <Outlet />
 
-      {datas.map((user) => {
-        return <div key={user.id}>{user.name}</div>;
+      {datas.map((annonce) => {
+        return <div key={annonce.id}>{annonce.name}</div>;
       })}
     </div>
   );
