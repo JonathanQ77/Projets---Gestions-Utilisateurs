@@ -24,14 +24,14 @@ export function App() {
     fetchInterieurs();
   }, []);
 
-  const datasAnnonces = useSelector((store) => store.ANNONCE.annonceList);
-  const datasInterieurs = useSelector((store) => store.ANNONCE.interieurList);
+  //const datasAnnonces = useSelector((store) => store.ANNONCE.annonceList);
+  //const datasInterieurs = useSelector((store) => store.ANNONCE.interieurList);
 
   return (
     <div className="">
       <Outlet />
-
-      {datasAnnonces.map((annonce, i) => {
+      {/*
+{datasAnnonces.map((annonce, i) => {
         return (
           <div key={annonce.id + i}>
             {annonce.description} {annonce.prixLoyer}
@@ -45,6 +45,7 @@ export function App() {
           </div>
         );
       })}
+*/}
     </div>
   );
 }
