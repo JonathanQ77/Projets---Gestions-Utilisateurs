@@ -1,10 +1,15 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3090/annonces";
+const BASE_URL_ANNONCES = "http://localhost:3090/annonces";
+const BASE_URL_INTERIEUR = "http://localhost:3090/interieur";
 
 export class AnnonceAPI {
-  static async fetchAll() {
-    return (await axios.get(`${BASE_URL}`)).data.map(this.formatId);
+  static async fetchAllAnnonces() {
+    return (await axios.get(`${BASE_URL_ANNONCES}`)).data.map(this.formatId);
+  }
+
+  static async fetchAllInterieur() {
+    return (await axios.get(`${BASE_URL_INTERIEUR}`)).data.map(this.formatId);
   }
 
   static formatId(annonce) {
