@@ -5,6 +5,7 @@ import { AnnonceAPI } from "API/annonce-api";
 import { setAnnonceList } from "store/annonce/annonce-slice";
 import { useEffect } from "react";
 import { setInterieurList } from "store/annonce/annonce-slice";
+import { Header } from "components/Header/Header";
 
 export function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ export function App() {
 
   return (
     <div className="">
+      <Header />
       <Outlet />
       {/*
 {datasAnnonces.map((annonce, i) => {

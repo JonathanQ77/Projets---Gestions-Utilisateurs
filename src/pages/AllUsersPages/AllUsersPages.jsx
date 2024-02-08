@@ -1,5 +1,5 @@
 import s from "./style.module.css";
 
 export function AllUsersPages() {
-  return <>Liste des utlisateurs : </>;
+  return <div className="mt-16 ml-5">Liste des utlisateurs : </div>;
 }
