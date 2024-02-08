@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export function Header({ props }) {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="bg-sky-50 h-36 shadow-md">
       <div>
         <Logo
           title={"EASY IMMO"}

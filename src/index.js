@@ -5,9 +5,9 @@ import { App } from "./components/App/App";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { UserPage } from "pages/UserPage/UserPage";
-import { AllUsersPages } from "./pages/AllUsersPages/AllUsersPages";
-import { UserCreate } from "./pages/UserCreate/UserCreate";
+import { AnnoncePage } from "pages/AnnoncePage/AnnoncePage";
+import { AllAnnoncesPages } from "./pages/AllAnnoncesPages/AllAnnoncesPages";
+import { AnnonceCreate } from "./pages/annonceCreate/AnnonceCreate";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,9 +15,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/" element={<AllUsersPages />} />
-          <Route path="/user/user:id" element={<UserPage />} />
-          <Route path="/user/new" element={<UserCreate />} />
+          <Route path="/" element={<AllAnnoncesPages />} />
+          <Route path="/annonce/annonce:id" element={<AnnoncePage />} />
+          <Route path="/annonce/new" element={<AnnonceCreate />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>

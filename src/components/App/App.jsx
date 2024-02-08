@@ -29,7 +29,7 @@ export function App() {
   //const datasInterieurs = useSelector((store) => store.ANNONCE.interieurList);
 
   return (
-    <div className="">
+    <div className="bg-slate-50 ">
       <Header />
       <Outlet />
       {/*
