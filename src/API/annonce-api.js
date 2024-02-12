@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const BASE_URL_ANNONCES = "http://localhost:3090/annonces";
-const BASE_URL_INTERIEUR = "http://localhost:3090/interieur";
 
 export class AnnonceAPI {
   static async fetchAllAnnonces() {

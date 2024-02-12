@@ -19,21 +19,13 @@ export function App() {
     fetchAnnonces();
   }, []);
 
-  const datasAnnonces = useSelector((store) => store.ANNONCE.annonceList);
+  //const datasAnnonces = useSelector((store) => store.ANNONCE.annonceList);
   //const datasInterieurs = useSelector((store) => store.ANNONCE.interieurList);
 
   return (
     <div className="bg-slate-50 ">
       <Header />
       <Outlet />
-
-      {datasAnnonces.map((annonce, i) => {
-        return (
-          <div key={annonce.id + i}>
-            {annonce.description} {annonce.date}
-          </div>
-        );
-      })}
     </div>
   );
 }
