@@ -10,12 +10,9 @@ export const annonceSlice = createSlice({
     setAnnonceList: (currentSlice, action) => {
       currentSlice.annonceList = action.payload;
     },
-    setInterieurList: (currentSlice, action) => {
-      currentSlice.interieurList = action.payload;
-    },
   },
 });
 
 export const annonceReducer = annonceSlice.reducer;
 
-export const { setAnnonceList, setInterieurList } = annonceSlice.actions;
+export const { setAnnonceList } = annonceSlice.actions;

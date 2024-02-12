@@ -2,78 +2,33 @@
     "annonces": [
         {
             "id": 1,
-            "description" : "APPARTEMENT À STE GENEVIEVE DES BOIS",
-            "prixLoyer" : 500,
-            "prixHonoraires": 250,
-            "depotGarantie": 450,
-            "charges": "comprises",
-            "type" : "Appartement",
-            "AchatLocation": "location",
-            "localisation": "ste-genevieve des bois (91)"
+            "description" : "description 1",
+            "date" : "12/02/2024",
+            "titre": "titre 1",
+            "auteur" : "auteur name",
+            "image" : ""
+            
         },
         {
             "id": 2,
-            "description" : "APPARTEMENT À STE GENEVIEVE DES BOIS",
-            "prixLoyer" : 500,
-            "prixHonoraires": 250,
-            "depotGarantie": 450,
-            "charges": "comprises",
-            "type" : "Appartement",
-            "AchatLocation": "location",
-            "localisation": "ste-genevieve des bois (91)"
+            "description" : "description 2",
+            "date" : "12/02/2024",
+            "titre": "titre 2",
+            "auteur" : "auteur name",
+            "image" : ""
+            
         },
         {
             "id": 3,
-            "description" : "APPARTEMENT À STE GENEVIEVE DES BOIS",
-            "prixLoyer" : 500,
-            "prixHonoraires": 250,
-            "depotGarantie": 450,
-            "charges": "comprises",
-            "type" : "Appartement",
-            "AchatLocation": "location",
-            "localisation": "ste-genevieve des bois (91)"
+            "description" : "description 3",
+            "date" : "12/01/2024",
+            "titre": "titre 3",
+            "auteur" : "auteur name",
+            "image" : ""
+            
         }
         
-    ],
-   "interieur" : 
-   [
-    {
-        "id": 1,
-        "chauffage": "individuel",
-        "cuisine":   "equipee ",
-        "meublé": "non",
-        "salle de bain": 1,
-        "WC": 1,
-        "taille": 64,
-        "nombrePiece" : 4,
-        "nombreChambre" : 3
-
-    },
-    {
-        "id": 2,
-        "chauffage": "individuel",
-        "cusine":   "equipee ",
-        "meublé": "non",
-        "salle de bain": 1,
-        "WC": 1,
-        "taille": 64,
-        "nombrePiece" : 4,
-        "nombreChambre" : 3
-
-    },
-    {
-        "id": 3,
-        "chauffage": "individuel",
-        "cusine":   "equipee ",
-        "meublé": "non",
-        "salle de bain": 1,
-        "WC": 1,
-        "taille": 64,
-        "nombrePiece" : 4,
-        "nombreChambre" : 3
-
-    }
-   
-
+        
     ]
+   
 }

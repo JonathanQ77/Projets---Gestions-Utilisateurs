@@ -15,39 +15,25 @@ export function App() {
     dispatch(setAnnonceList(annoncesList));
   }
 
-  async function fetchInterieurs() {
-    const interieursList = await AnnonceAPI.fetchAllInterieur();
-    dispatch(setInterieurList(interieursList));
-  }
-
   useEffect(() => {
     fetchAnnonces();
-    fetchInterieurs();
   }, []);
 
-  //const datasAnnonces = useSelector((store) => store.ANNONCE.annonceList);
+  const datasAnnonces = useSelector((store) => store.ANNONCE.annonceList);
   //const datasInterieurs = useSelector((store) => store.ANNONCE.interieurList);
 
   return (
     <div className="bg-slate-50 ">
       <Header />
       <Outlet />
-      {/*
-{datasAnnonces.map((annonce, i) => {
+
+      {datasAnnonces.map((annonce, i) => {
         return (
           <div key={annonce.id + i}>
-            {annonce.description} {annonce.prixLoyer}
+            {annonce.description} {annonce.date}
           </div>
         );
       })}
-      {datasInterieurs.map((interieur, i) => {
-        return (
-          <div key={interieur.id + i}>
-            {interieur.chauffage} {interieur.meublé}
-          </div>
-        );
-      })}
-*/}
     </div>
   );
 }
