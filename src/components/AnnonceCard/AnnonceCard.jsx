@@ -73,7 +73,8 @@ export function AnnonceCard({
         <div className="p-4">
           <h2 className="text-xl  font-semibold">{title}</h2>
           <h5 className="text-gray-600">{date}</h5>
-          <p>{content}</p>
+          {/** FAIRE CLASS OVERFLOW pour depassement text contenu probleme :  */}
+          <p className="">{content}</p>
           <div className="flex justify-between items-center mt-4">
             <ButtonAddAnnonces
               children="Découvrir"
