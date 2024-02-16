@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 export function AnnonceList({ annonceList }) {
   const navigate = useNavigate();
+
+  function deleteAnnonce(e) {}
   return (
     <div>
       {annonceList.map((annonce) => {
