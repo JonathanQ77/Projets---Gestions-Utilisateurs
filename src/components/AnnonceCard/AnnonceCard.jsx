@@ -6,6 +6,7 @@ import { ButtonAddAnnonces } from "components/ButtonAddAnnonces/ButtonAddAnnonce
 export function AnnonceCard({
   title,
   date,
+  image,
   content,
   onClickNavigate,
   onClickDelete,
@@ -25,15 +26,15 @@ export function AnnonceCard({
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
         style={{ borderColor: cardHovered ? "#086788" : "black" }}
-        className="w-80 p-0 mt-10 ml-10 bg-white rounded-lg shadow-md transform  transition-transform duration-300 ease-in-out"
+        className="w-[80%]  hover:shadow-blue-500/50 p-0 mt-10 ml-14 mb-14 bg-white rounded-lg shadow-md transform  transition-all duration-700 ease-in-out"
       >
         <img
-          className="w-full h-40  object-cover rounded-t-lg"
+          className="w-full h-56 object-cover hover:opacity-80  transition duration-500  h-40 overflow-hidden  rounded-t-lg"
           alt="Card Image"
-          src="https://via.placeholder.com/150"
+          src={image}
         />
         <svg
-          className="absolute w-8 top-4 left-[270px] transition duration-500"
+          className="absolute w-8 top-4 left-[380px] transition duration-500"
           onMouseEnter={() => setColorTrash(true)}
           onMouseLeave={() => setColorTrash(false)}
           onClick={deleteTrash_}
@@ -70,17 +71,26 @@ export function AnnonceCard({
           </g>
         </svg>
 
-        <div className="p-4">
-          <h2 className="text-xl  font-semibold">{title}</h2>
-          <h5 className="text-gray-600">{date}</h5>
+        <div className="p-4 text-center">
+          <h2 className="text-3xl text-center mb-6 mt-5 font-roboto font-semibold">
+            {title}
+          </h2>
+
           {/** FAIRE CLASS OVERFLOW pour depassement text contenu probleme :  */}
-          <p className="">{content}</p>
-          <div className="flex justify-between items-center mt-4">
+          <p
+            className={`mb-7 font-raleway overscroll-contain font-light ${s.content}`}
+          >
+            {content}
+          </p>
+          <div className="  mt-4">
             <ButtonAddAnnonces
-              children="Découvrir"
+              children="Découvrir ->"
               onClickCreate={onClickNavigate}
             />
           </div>
+          <h5 className="text-gray-600 mt-5 font-raleway font-medium text-end">
+            {date}
+          </h5>
         </div>
       </div>
     </>

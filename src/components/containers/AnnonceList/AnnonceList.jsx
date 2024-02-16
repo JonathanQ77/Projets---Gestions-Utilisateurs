@@ -14,6 +14,7 @@ export function AnnonceList({ annonceList }) {
               content={annonce.description}
               onClickNavigate={() => navigate("/annonce/" + annonce.id)}
               onClickDelete={() => alert("delete")}
+              image={annonce.image}
             />
           </div>
         );
