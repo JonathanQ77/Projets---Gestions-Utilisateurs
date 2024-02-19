@@ -8,7 +8,7 @@ export function AllAnnoncesPages({ props }) {
   return (
     <div className="mt-5 ml-3 ">
       Liste des annonces :
-      <div>
+      <div className="">
         <AnnonceList annonceList={annonceList} />
       </div>
     </div>

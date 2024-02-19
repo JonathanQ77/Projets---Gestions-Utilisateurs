@@ -6,10 +6,10 @@ export function AnnonceList({ annonceList }) {
 
   function deleteAnnonce(e) {}
   return (
-    <div>
+    <div className="grid md:grid-cols-2">
       {annonceList.map((annonce) => {
         return (
-          <div key={annonce.id} className="">
+          <div key={annonce.id} className=" mt-10">
             <AnnonceCard
               title={annonce.titre}
               date={annonce.date}
