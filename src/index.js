@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<AllAnnoncesPages />} />
-          <Route path="/annonce/annonce:id" element={<AnnoncePage />} />
+          <Route path="/annonce/:annonceId" element={<AnnoncePage />} />
           <Route path="/annonce/new" element={<AnnonceCreate />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
