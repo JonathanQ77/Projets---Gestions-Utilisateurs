@@ -5,6 +5,7 @@ import { ButtonAddAnnonces } from "components/ButtonAddAnnonces/ButtonAddAnnonce
 import { useState } from "react";
 import { ValidatorService } from "services/form-validators";
 import { FieldError } from "components/FieldError/FieldError";
+import { useNavigate } from "react-router-dom";
 
 // constante pour gerer les nombres de lettres autorisées dans les inputs :
 
@@ -24,6 +25,7 @@ export function AnnonceForm({
   onClickDelete,
   submit,
 }) {
+  const navigate = useNavigate();
   // state valeur du formulaire :
   const [formValues, setFormValues] = useState({
     titre: annonce?.titre || "",
@@ -170,7 +172,7 @@ export function AnnonceForm({
     <form class="relative py-3 sm:max-w-xl sm:mx-auto md:max-w-3xl ">
       <div class="relative px-4 py-10 bg-white mx-8  shadow rounded-3xl sm:p-10">
         <div className="flex justify-center">
-          <h2 className="text-2xl font-roboto font-semibold text-center mb-14">
+          <h2 className="text-2xl font-roboto font-semibold uppercase text-center mb-14">
             {title}
           </h2>
           {actionIcons}
@@ -183,7 +185,9 @@ export function AnnonceForm({
               {isEditable ? (
                 contentInput
               ) : (
-                <p className={s.content}>{annonce.description}</p>
+                <p className={`${s.content} text-center`}>
+                  {annonce.description}
+                </p>
               )}
             </div>
           </div>
@@ -191,13 +195,13 @@ export function AnnonceForm({
             <div>{submit && submitButton}</div>
           </div>
 
-          <div class="flex items-center justify-between mt-4">
+          <div class="flex items-center justify-between mt-4   ">
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
             <a
               class="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
               href="#"
             >
-              have an account? Log in
+              retour à l'acceuil
             </a>
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
           </div>

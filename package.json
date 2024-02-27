@@ -24,6 +24,9 @@
     "eject": "react-scripts eject",
     "dev-server": "json-server --watch db.json -p 3090"
   },
+  "overrides":{
+    
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

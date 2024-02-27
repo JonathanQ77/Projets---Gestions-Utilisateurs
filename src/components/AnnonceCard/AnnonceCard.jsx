@@ -36,7 +36,7 @@ export function AnnonceCard({
 
         <div className="p-4 text-center">
           <div className="flex justify-between mb-5 mt-5">
-            <h2 className="text-2xl sm:font-raleway  relative left-28 mb-6 mt-5 ml-20 sm:left-44 md:left-24 lg:left-[135px] xl:left-[220px] 2xl:left-[300px] font-roboto font-semibold">
+            <h2 className="text-2xl sm:font-raleway  relative left-28 mb-6 mt-5 ml-20 sm:left-44 md:left-24 lg:left-[135px] xl:left-[220px] 2xl:left-[220px] font-roboto font-semibold">
               {title}
             </h2>
             <svg
