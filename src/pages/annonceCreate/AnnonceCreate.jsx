@@ -16,7 +16,7 @@ export function AnnonceCreate() {
     const createdAnnonce = await AnnonceAPI.fetchCreateAnnonce({
       ...formValues,
       date: new Date().toLocaleDateString(),
-      image: "https://picsum.photos/870",
+      image: "https://picsum.photos/seed/picsum/400/400",
     });
     dispatch(addAnnonce(createdAnnonce));
     navigate("/");

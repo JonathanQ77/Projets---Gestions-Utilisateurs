@@ -5,13 +5,13 @@ import { ButtonAddAnnonces } from "components/ButtonAddAnnonces/ButtonAddAnnonce
 import { useState } from "react";
 import { ValidatorService } from "services/form-validators";
 import { FieldError } from "components/FieldError/FieldError";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // constante pour gerer les nombres de lettres autorisées dans les inputs :
 
 const VALIDATORS = {
   titre: (value) => {
-    return ValidatorService.min(value, 3) || ValidatorService.max(value, 15);
+    return ValidatorService.min(value, 3) || ValidatorService.max(value, 25);
   },
   description: (value) => {
     return ValidatorService.min(value, 3);
@@ -164,7 +164,7 @@ export function AnnonceForm({
   const actionIcons = (
     <>
       <div>{onClickEdit && pencilIcon}</div>
-      <div>{onClickDelete && trashIcon}</div>
+      <div className="mr-[120px]">{onClickDelete && trashIcon}</div>
     </>
   );
 
@@ -197,12 +197,13 @@ export function AnnonceForm({
 
           <div class="flex items-center justify-between mt-4   ">
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-            <a
-              class="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
-              href="#"
+            <Link
+              to={"/"}
+              className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline"
             >
-              retour à l'acceuil
-            </a>
+              Retour à l'acceuil
+            </Link>
+
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
           </div>
         </div>
