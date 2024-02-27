@@ -1,10 +1,18 @@
+import { AnnonceAPI } from "API/annonce-api";
 import { AnnonceCard } from "components/AnnonceCard/AnnonceCard";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { deleteAnnonce } from "store/annonce/annonce-slice";
 
 export function AnnonceList({ annonceList }) {
   const navigate = useNavigate();
-
-  function deleteAnnonce(e) {}
+  const dispatch = useDispatch();
+  function deleteAnnonce_(annonce) {
+    if (window.confirm("êtes vous sur de vouloir supprimer l'annonce ?")) {
+      AnnonceAPI.deleteById(annonce.id);
+      dispatch(deleteAnnonce(annonce));
+    }
+  }
   return (
     <div className="grid md:grid-cols-2">
       {annonceList.map((annonce) => {
@@ -15,7 +23,7 @@ export function AnnonceList({ annonceList }) {
               date={annonce.date}
               content={annonce.description}
               onClickNavigate={() => navigate("/annonce/" + annonce.id)}
-              onClickDelete={() => alert("delete")}
+              onClickDelete={() => deleteAnnonce_(annonce)}
               image={annonce.image}
             />
           </div>

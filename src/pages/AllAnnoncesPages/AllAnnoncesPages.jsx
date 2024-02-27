@@ -7,7 +7,9 @@ export function AllAnnoncesPages({ props }) {
   const annonceList = useSelector((store) => store.ANNONCE.annonceList);
   return (
     <div className="mt-5 ml-3 ">
-      Liste des annonces :
+      <h3 className="text-center mt-10 text-3xl font-roboto font-semibold underline underline-offset-2">
+        Liste des annonces :
+      </h3>
       <div className="">
         <AnnonceList annonceList={annonceList} />
       </div>

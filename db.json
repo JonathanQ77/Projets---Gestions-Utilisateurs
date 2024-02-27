@@ -1,34 +1,20 @@
 {
-    "annonces": [
-        {
-            "id": 1,
-            "description" : "Ea cupidatat Lorem duis eu enim do nulla. Nulla cillum aliqua nostrud velit tempor in excepteur. Occaecat nostrud amet quis est elit proident aute sit et qui sunt sint officia laboris. Adipisicing consequat duis ex et est. Cillum dolor laborum labore amet sit nostrud laboris nulla sit id velit duis aliqua commodo. Laboris consectetur do irure aliquip reprehenderit cillum pariatur qui. Cillum ut est Lorem nisi ad dolor dolor consectetur nostrud elit cupidatat nisi. Dolor consequat nulla in officia reprehenderit sint reprehenderit. Deserunt magna deserunt amet exercitation est cupidatat. Aute eiusmod irure incididunt amet mollit non ex ad laboris mollit. Qui reprehenderit ex tempor aliqua qui incididunt quis. Ex mollit in ut laboris proident amet labore. Laborum cupidatat occaecat id culpa consectetur aliqua ut. Non elit deserunt reprehenderit magna est qui cillum aliqua qui aliquip exercitation nisi et. Proident laborum anim nostrud non consectetur cupidatat. Duis minim eiusmod est eu. Do dolor exercitation cillum occaecat.",
-            "date" : "12/02/2024",
-            "titre": "titre 1",
-            "auteur" : "auteur name",
-            "image" : "https://picsum.photos/870"
-            
-        },
-        {
-            "id": 2,
-            "description" : "Ullamco cillum nisi incididunt ex. Elit in cillum duis dolore dolore dolore consectetur deserunt velit ex eiusmod consequat ut. Sint ad consectetur aute elit consequat aute fugiat. Eiusmod nostrud cillum culpa incididunt dolore dolore anim incididunt consectetur laborum est anim commodo.",
-            "date" : "12/02/2024",
-            "titre": "titre 2",
-            "auteur" : "auteur name",
-            "image" : "https://picsum.photos/870"
-            
-        },
-        {
-            "id": 3,
-            "description" : "Esse ullamco eu tempor do nisi consectetur duis exercitation nostrud incididunt. Labore proident fugiat irure elit aute. Anim aliquip qui exercitation id nulla consectetur.",
-            "date" : "12/01/2024",
-            "titre": "titre 3",
-            "auteur" : "auteur name",
-            "image" : "https://picsum.photos/seed/3/870"
-            
-        }
-        
-        
-    ]
-   
+  "annonces": [
+    {
+      "id": "1",
+      "description": "Ea cupidatat Lorem duis eu enim do nulla. Nulla cillum aliqua nostrud velit tempor in excepteur. Occaecat nostrud amet quis est elit proident aute sit et qui sunt sint officia laboris. Adipisicing consequat duis ex et est. Cillum dolor laborum labore amet sit nostrud laboris nulla sit id velit duis aliqua commodo. Laboris consectetur do irure aliquip reprehenderit cillum pariatur qui. Cillum ut est Lorem nisi ad dolor dolor consectetur nostrud elit cupidatat nisi. Dolor consequat nulla in officia reprehenderit sint reprehenderit. Deserunt magna deserunt amet exercitation est cupidatat. Aute eiusmod irure incididunt amet mollit non ex ad laboris mollit. Qui reprehenderit ex tempor aliqua qui incididunt quis. Ex mollit in ut laboris proident amet labore. Laborum cupidatat occaecat id culpa consectetur aliqua ut. Non elit deserunt reprehenderit magna est qui cillum aliqua qui aliquip exercitation nisi et. Proident laborum anim nostrud non consectetur cupidatat. Duis minim eiusmod est eu. Do dolor exercitation cillum occaecat.",
+      "date": "12/02/2024",
+      "titre": "titre 1",
+      "auteur": "auteur name",
+      "image": "https://picsum.photos/870"
+    },
+    {
+      "id": "3",
+      "description": "Esse ullamco eu tempor do nisi consectetur duis exercitation nostrud incididunt. Labore proident fugiat irure elit aute. Anim aliquip qui exercitation id nulla consectetur.",
+      "date": "12/01/2024",
+      "titre": "titre 3",
+      "auteur": "auteur name",
+      "image": "https://picsum.photos/seed/3/870"
+    }
+  ]
 }
