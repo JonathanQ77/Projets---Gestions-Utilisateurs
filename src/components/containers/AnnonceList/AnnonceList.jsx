@@ -13,6 +13,9 @@ export function AnnonceList({ annonceList }) {
       dispatch(deleteAnnonce(annonce));
     }
   }
+
+  // function slice data par page :
+
   return (
     <div className="grid md:grid-cols-2">
       {annonceList.map((annonce) => {

@@ -4,6 +4,7 @@ import { AnnonceList } from "components/containers/AnnonceList/AnnonceList";
 import { SearchBar } from "SearchBar/SearchBar";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Pagination } from "components/Pagination/Pagination";
 export function AllAnnoncesPages({ props }) {
   //appel des datas du store :
   const [searchText, setSearchText] = useState("");
@@ -19,6 +20,14 @@ export function AllAnnoncesPages({ props }) {
 
     return containTitle || containContent;
   });
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPages, setPostsPerPages] = useState(2);
+  //  const currentPage = 1;  page de defaut
+  // const postsPerPages = 5;
+  const lastPostIndex = currentPage * postsPerPages;
+  const firstPostIndex = lastPostIndex - postsPerPages;
+  const slicedData = filteredList.slice(firstPostIndex, lastPostIndex);
   return (
     <div className="mt-5 ml-3 ">
       <h3 className="text-center mt-10 text-3xl font-roboto font-semibold underline underline-offset-2">
@@ -52,7 +61,13 @@ export function AllAnnoncesPages({ props }) {
         </div>
       )}
       <div className="">
-        <AnnonceList annonceList={filteredList} />
+        <AnnonceList annonceList={slicedData} />
+        <Pagination
+          totalPosts={filteredList.length}
+          postsPerPages={postsPerPages}
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        />
       </div>
     </div>
   );
