@@ -20,14 +20,28 @@ export function AllAnnoncesPages({ props }) {
 
     return containTitle || containContent;
   });
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPages, setPostsPerPages] = useState(2);
+  //LOGIC PAGINATE
+  const [currentPage, setCurrentPage] = useState([1]);
+  const [postsPerPages, setPostsPerPages] = useState([2]);
   //  const currentPage = 1;  page de defaut
   // const postsPerPages = 5;
   const lastPostIndex = currentPage * postsPerPages;
   const firstPostIndex = lastPostIndex - postsPerPages;
   const slicedData = filteredList.slice(firstPostIndex, lastPostIndex);
+  const previousPage = () => {
+    if (currentPage === 1) {
+      setCurrentPage(1);
+    } else {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  const nextPage = () => {
+    if (currentPage === lastPostIndex / 2) {
+      setCurrentPage(3);
+    } else {
+      setCurrentPage(currentPage + 1);
+    }
+  };
   return (
     <div className="mt-5 ml-3 ">
       <h3 className="text-center mt-10 text-3xl font-roboto font-semibold underline underline-offset-2">
@@ -67,6 +81,8 @@ export function AllAnnoncesPages({ props }) {
           postsPerPages={postsPerPages}
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}
+          previousPage={previousPage}
+          nextPage={nextPage}
         />
       </div>
     </div>
