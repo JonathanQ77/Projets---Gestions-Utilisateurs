@@ -1,5 +1,5 @@
-import s from "./style.module.css";
-import searchBar from "../assets/searchBar.svg";
+import s from './style.module.css';
+import searchBar from '../assets/searchBar.svg';
 export function SearchBar({ textChange, placeholder }) {
   return (
     <>
@@ -13,7 +13,7 @@ export function SearchBar({ textChange, placeholder }) {
       <img
         src={searchBar}
         alt=""
-        className="w-7  bottom-[604px] left-[76px] absolute"
+        className="w-7  top-[1203px] left-[76px] absolute"
       />
     </>
   );

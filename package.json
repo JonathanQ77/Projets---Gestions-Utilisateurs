@@ -10,6 +10,7 @@
     "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
+    "gsap": "^3.12.5",
     "latest": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,15 +19,13 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start -p 4000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev-server": "json-server --watch db.json -p 3090"
   },
-  "overrides":{
-    
-  },
+  "overrides": {},
   "eslintConfig": {
     "extends": [
       "react-app",

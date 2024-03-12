@@ -1,8 +1,8 @@
-import { AnnonceAPI } from "API/annonce-api";
-import { AnnonceCard } from "components/AnnonceCard/AnnonceCard";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { deleteAnnonce } from "store/annonce/annonce-slice";
+import { AnnonceAPI } from 'API/annonce-api';
+import { AnnonceCard } from 'components/AnnonceCard/AnnonceCard';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { deleteAnnonce } from 'store/annonce/annonce-slice';
 
 export function AnnonceList({ annonceList }) {
   const navigate = useNavigate();
@@ -22,12 +22,12 @@ export function AnnonceList({ annonceList }) {
         return (
           <div key={annonce.id} className=" mt-10">
             <AnnonceCard
-              title={annonce.titre}
+              title={annonce.title}
               date={annonce.date}
               content={annonce.description}
-              onClickNavigate={() => navigate("/annonce/" + annonce.id)}
+              onClickNavigate={() => navigate('/annonce/' + annonce.id)}
               onClickDelete={() => deleteAnnonce_(annonce)}
-              image={annonce.image}
+              image={annonce.imageUrl}
             />
           </div>
         );
